@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/Header.ejs") %> <%- include("./partials/Link.ejs") %>
+  <body style="background-color: #e3f2fd">
+    <div class="container-fluid">
+      <div><%- include("./partials/NavBar.ejs") %></div>
+      <div>
+        <% if(products.length > 0) { %>
+        <div class="card-group">
+          <% products.forEach(i => { %>
+          <div class="card m-2 row g-3">
+            <div
+              class="col-sm-7 col-md-6 col-lg-4 col-xl-3"
+              style="width: 14rem"
+              id="<%= i.pcatogory %>"
+            >
+              <a href="/<%= i._id %>/details" style="text-decoration: none">
+                <center>
+                  <img
+                    src="<%= i.pimage %>"
+                    class="img-fluid"
+                    alt="Product Image"
+                    style="max-width: 100%; height: 200px; object-fit: cover"
+                  />
+                </center>
+                <div class="card-body">
+                  <center><h5 class="card-title"><%= i.pname %></h5></center>
+                  <center>
+                    <h6 class="card-title">Rs. <%= i.pprice %></h6>
+                  </center>
+                  <p class="card-text"></p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+        <% } else { %>
+        <p>There are no products to display...</p>
+        <% } %> <%- include("./partials/Footer.ejs") %>
+      </div>
+    </div>
+  </body>
+</html>

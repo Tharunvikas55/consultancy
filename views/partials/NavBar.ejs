@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+  <a href="/api/v1/products" class="navbar-brand"
+    ><i class="fa fa-cube"></i>Khandan <b>stores</b>
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/api/v1/products"
+          >Home</a
+        >
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li> -->
+      <li class="nav-item dropdown">
+        <div class="nav-item dropdown">
+          <a
+            href="/index"
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            >All Categories</a
+          >
+          <div class="dropdown-menu">
+            <% categories.forEach(function(c){ %>
+            <a href="/api/v1/products/<%= c.slug %>" class="dropdown-item"
+              ><%= c.title %></a
+            >
+            <% }); %>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+          >Disabled</a
+        >
+      </li>
+    </ul>
+    <form class="d-flex" action="/api/v1/products" method="GET">
+      <input
+        class="form-control me-2"
+        type="search"
+        name="keyword"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    <!-- <form class="d-flex" action="/api/v1/products" method="GET">
+        <input
+          class="form-control me-2"
+          type="search"
+          name="keyword"
+          placeholder="Search by keyword"
+          aria-label="Search"
+        />
+        <select class="form-control me-2" name="category">
+          <option value="">All Categories</option>
+          <% categories.forEach(function(c){ %>
+            <option value="<%= c._id %>"><%= c.title %></option>
+          <% }); %>
+        </select>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+      
+    <div class="navbar-nav w-2">
+      <!-- <a href="/api/v1/signup" class="nav-item nav-link"> Sign Up</a> -->
+      <div class="nav-item dropdown">
+        <a href="/api/v1/login" class="nav navbar-nav nav-link navbar-right"
+          ><i class="bi-box-arrow-in-left"></i>Login</a
+        >
+      </div>
+    </div>
+  </div>
+</nav>
