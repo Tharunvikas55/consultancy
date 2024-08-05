@@ -19,6 +19,7 @@
     }
   </style>
   <body style="background-color: #e3f2fd">
+    
     <section class="vh-100">
       <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -30,7 +31,7 @@
             />
           </div>
           <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-            <form action="/api/v1/signup" method="post">
+            <form action="/api/v1/login" method="post">
               <!-- <div
                 class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start"
               >
@@ -137,10 +138,15 @@
                   class="btn btn-danger btn-lg"
                   style="padding-left: 2.5rem; padding-right: 2.5rem"
                 >
-                  <a href="/api/v1/products" class="text-light" style="text-decoration: none;">Cancel</a>
+                  <a
+                    href="/api/v1/products"
+                    class="text-light"
+                    style="text-decoration: none"
+                    >Cancel</a
+                  >
                 </button>
                 <button
-                  type="button"
+                  type="submit"
                   data-mdb-button-init
                   data-mdb-ripple-init
                   class="btn btn-primary btn-lg"

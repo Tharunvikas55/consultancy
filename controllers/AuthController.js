@@ -1,8 +1,11 @@
 // controllers/AuthController.js
 
 exports.getLogin = (req, res,next) => {
-    res.render("Login", {title:"index"});
-  };
+ res.render("Login", {title:"index"});
+};
+exports.postLogin = (req, res,next) => {
+  res.redirect('/api/v1/home');
+};
   
   // Example of setting errors in your login route (when errors occur)
 //   exports.postLogin = (req, res) => {
@@ -25,4 +28,5 @@ exports.getLogin = (req, res,next) => {
 exports.getSignUp=(req,res)=>{
     res.render("SignUp",{title:"signUp"})
   };
+  
   

@@ -6,15 +6,34 @@ customerName:{
     type:String,
     required:true,
 },
+email:{
+    type:String,
+},
 customerMobileNumber:{
     type:String,
     required:true,
 },
-cus_address:{
+doorNumber:{
     type:String,
     required:true,
 },
 password:{
+    type:String,
+    required:true,
+},
+city:{
+    type:String,
+    required:true,
+},
+pincode:{
+    type:String,
+    required:true,
+},
+district:{
+    type:String,
+    required:true,
+},
+state:{
     type:String,
     required:true,
 },

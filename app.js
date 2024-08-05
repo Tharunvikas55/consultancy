@@ -23,6 +23,9 @@ app.use((req, res, next) => {
   next();
 });
 
+
+
+
 app.use('/api/v1', products)
 app.use('/api/v1',auth)
 
