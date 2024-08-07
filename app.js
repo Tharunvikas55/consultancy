@@ -30,6 +30,7 @@ app.use('/api/v1', products)
 app.use('/api/v1',auth)
 
 // Fetch categories and store them in app.locals
+//store it in local
 CategoryModel.find()
   .then(categories => {
     app.locals.categories = categories;
